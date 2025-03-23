@@ -7,7 +7,7 @@ import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { ReloadIcon } from '@radix-ui/react-icons';
 
-export function ContactForm() {
+export default function ContactForm() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
