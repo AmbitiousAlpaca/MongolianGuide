@@ -41,12 +41,12 @@ function App() {
             <Introduction />
           </section>
           
-          <section id="how-it-works">
-            <HowItWorks />
-          </section>
-          
           <section id="about">
             <AboutTestimonials />
+          </section>
+          
+          <section id="how-it-works">
+            <HowItWorks />
           </section>
           
           <section id="destinations">

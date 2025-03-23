@@ -61,18 +61,18 @@ export default function Footer() {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('how-it-works')}
-                  className="text-white/80 hover:text-accent transition-colors"
-                >
-                  How It Works
-                </button>
-              </li>
-              <li>
-                <button 
                   onClick={() => scrollToSection('about')}
                   className="text-white/80 hover:text-accent transition-colors"
                 >
                   About Me
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('how-it-works')}
+                  className="text-white/80 hover:text-accent transition-colors"
+                >
+                  How It Works
                 </button>
               </li>
               <li>
