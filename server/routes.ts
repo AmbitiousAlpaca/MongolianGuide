@@ -25,6 +25,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Create the trip inquiry
       const tripInquiry = await storage.createTripInquiry(validatedData);
       
+      // Send email notification
+      try {
+        const { sendInquiryNotification } = await import('./emailService');
+        await sendInquiryNotification(tripInquiry);
+        console.log('Email notification sent successfully');
+      } catch (emailError) {
+        console.error('Failed to send email notification:', emailError);
+      }
+      
       console.log('Trip inquiry created successfully:', tripInquiry.id);
       res.status(201).json({ 
         message: "Trip inquiry received successfully",
