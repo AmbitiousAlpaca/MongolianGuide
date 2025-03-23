@@ -11,6 +11,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Trip inquiry routes
   app.post("/api/trip-inquiries", async (req, res) => {
     try {
+      console.log('Received trip inquiry:', req.body);
+      
       // Add current timestamp
       const inquiryData = {
         ...req.body,
@@ -23,12 +25,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Create the trip inquiry
       const tripInquiry = await storage.createTripInquiry(validatedData);
       
-      res.status(201).json(tripInquiry);
+      console.log('Trip inquiry created successfully:', tripInquiry.id);
+      res.status(201).json({ 
+        message: "Trip inquiry received successfully",
+        inquiry: tripInquiry 
+      });
     } catch (error) {
+      console.error('Error processing trip inquiry:', error);
       if (error instanceof z.ZodError) {
-        res.status(400).json({ message: "Invalid data", errors: error.errors });
+        res.status(400).json({ 
+          message: "Invalid data", 
+          errors: error.errors.map(e => ({
+            field: e.path.join('.'),
+            message: e.message
+          }))
+        });
       } else {
-        res.status(500).json({ message: "Something went wrong" });
+        res.status(500).json({ message: "Internal server error" });
       }
     }
   });

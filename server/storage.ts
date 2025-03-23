@@ -53,12 +53,19 @@ export class MemStorage implements IStorage {
       id,
       status: "new",
     };
+    
+    // Log the inquiry for monitoring
+    console.log(`New trip inquiry received from ${inquiry.name} (${inquiry.email})`);
+    console.log(`Destinations: ${inquiry.destinations.join(', ')}`);
+    console.log(`Activities: ${inquiry.activities.join(', ')}`);
+    
     this.tripInquiries.set(id, inquiry);
     return inquiry;
   }
 
   async getTripInquiries(): Promise<TripInquiry[]> {
-    return Array.from(this.tripInquiries.values());
+    return Array.from(this.tripInquiries.values())
+      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
   }
 
   async getTripInquiry(id: number): Promise<TripInquiry | undefined> {
