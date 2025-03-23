@@ -41,20 +41,20 @@ function App() {
             <Introduction />
           </section>
           
-          <section id="destinations">
-            <DestinationsSection onDestinationsChange={handleDestinationsChange} />
-          </section>
-          
-          <section id="activities">
-            <ActivitiesSection onActivitiesChange={handleActivitiesChange} />
-          </section>
-          
           <section id="how-it-works">
             <HowItWorks />
           </section>
           
           <section id="about">
             <AboutTestimonials />
+          </section>
+          
+          <section id="destinations">
+            <DestinationsSection onDestinationsChange={handleDestinationsChange} />
+          </section>
+          
+          <section id="activities">
+            <ActivitiesSection onActivitiesChange={handleActivitiesChange} />
           </section>
           
           <section id="contact">

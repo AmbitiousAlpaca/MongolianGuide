@@ -61,14 +61,6 @@ export default function Footer() {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('destinations')}
-                  className="text-white/80 hover:text-accent transition-colors"
-                >
-                  Destinations
-                </button>
-              </li>
-              <li>
-                <button 
                   onClick={() => scrollToSection('how-it-works')}
                   className="text-white/80 hover:text-accent transition-colors"
                 >
@@ -81,6 +73,22 @@ export default function Footer() {
                   className="text-white/80 hover:text-accent transition-colors"
                 >
                   About Me
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('destinations')}
+                  className="text-white/80 hover:text-accent transition-colors"
+                >
+                  Destinations
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('activities')}
+                  className="text-white/80 hover:text-accent transition-colors"
+                >
+                  Activities
                 </button>
               </li>
               <li>

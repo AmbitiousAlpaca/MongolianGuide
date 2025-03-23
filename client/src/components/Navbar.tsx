@@ -84,26 +84,6 @@ export default function Navbar() {
               Home
             </button>
             <button 
-              onClick={() => scrollToSection('destinations')}
-              className={`px-3 py-2 text-sm font-medium ${
-                isActive('destinations') 
-                  ? 'border-b-2 border-primary font-bold' 
-                  : ''
-              } ${isScrolled ? 'text-secondary hover:text-primary' : 'text-white hover:text-primary/90'} transition`}
-            >
-              Destinations
-            </button>
-            <button 
-              onClick={() => scrollToSection('activities')}
-              className={`px-3 py-2 text-sm font-medium ${
-                isActive('activities') 
-                  ? 'border-b-2 border-primary font-bold' 
-                  : ''
-              } ${isScrolled ? 'text-secondary hover:text-primary' : 'text-white hover:text-primary/90'} transition`}
-            >
-              Activities
-            </button>
-            <button 
               onClick={() => scrollToSection('how-it-works')}
               className={`px-3 py-2 text-sm font-medium ${
                 isActive('how-it-works') 
@@ -122,6 +102,26 @@ export default function Navbar() {
               } ${isScrolled ? 'text-secondary hover:text-primary' : 'text-white hover:text-primary/90'} transition`}
             >
               About Me
+            </button>
+            <button 
+              onClick={() => scrollToSection('destinations')}
+              className={`px-3 py-2 text-sm font-medium ${
+                isActive('destinations') 
+                  ? 'border-b-2 border-primary font-bold' 
+                  : ''
+              } ${isScrolled ? 'text-secondary hover:text-primary' : 'text-white hover:text-primary/90'} transition`}
+            >
+              Destinations
+            </button>
+            <button 
+              onClick={() => scrollToSection('activities')}
+              className={`px-3 py-2 text-sm font-medium ${
+                isActive('activities') 
+                  ? 'border-b-2 border-primary font-bold' 
+                  : ''
+              } ${isScrolled ? 'text-secondary hover:text-primary' : 'text-white hover:text-primary/90'} transition`}
+            >
+              Activities
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
@@ -159,26 +159,6 @@ export default function Navbar() {
             Home
           </button>
           <button 
-            onClick={() => scrollToSection('destinations')}
-            className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${
-              isActive('destinations') 
-                ? 'text-primary border-l-4 border-primary pl-2' 
-                : 'text-secondary hover:text-primary'
-            }`}
-          >
-            Destinations
-          </button>
-          <button 
-            onClick={() => scrollToSection('activities')}
-            className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${
-              isActive('activities') 
-                ? 'text-primary border-l-4 border-primary pl-2' 
-                : 'text-secondary hover:text-primary'
-            }`}
-          >
-            Activities
-          </button>
-          <button 
             onClick={() => scrollToSection('how-it-works')}
             className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${
               isActive('how-it-works') 
@@ -197,6 +177,26 @@ export default function Navbar() {
             }`}
           >
             About Me
+          </button>
+          <button 
+            onClick={() => scrollToSection('destinations')}
+            className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${
+              isActive('destinations') 
+                ? 'text-primary border-l-4 border-primary pl-2' 
+                : 'text-secondary hover:text-primary'
+            }`}
+          >
+            Destinations
+          </button>
+          <button 
+            onClick={() => scrollToSection('activities')}
+            className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${
+              isActive('activities') 
+                ? 'text-primary border-l-4 border-primary pl-2' 
+                : 'text-secondary hover:text-primary'
+            }`}
+          >
+            Activities
           </button>
           <button 
             onClick={() => scrollToSection('contact')}
