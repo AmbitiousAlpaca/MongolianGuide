@@ -110,16 +110,26 @@ export default function Hero() {
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Experience Mongolia Your Way</h1>
           <p className="text-lg md:text-xl mb-8">Tailor-made tours for adventurous travelers who seek authentic experiences with comfortable accommodations.</p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/destinations">
-              <a className="inline-block px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition duration-300">
-                Explore Destinations
-              </a>
-            </Link>
-            <Link href="/how-it-works">
-              <a className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm text-white font-medium rounded-md hover:bg-white/30 transition duration-300">
-                How It Works
-              </a>
-            </Link>
+            <a 
+              href="#destinations" 
+              className="inline-block px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('destinations')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Explore Destinations
+            </a>
+            <a 
+              href="#how-it-works" 
+              className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm text-white font-medium rounded-md hover:bg-white/30 transition duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              How It Works
+            </a>
           </div>
         </div>
       </div>

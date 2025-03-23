@@ -104,7 +104,7 @@ export function MapComponent({
         </div>
       </div>
       
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{__html: `
         .marker-pin {
           width: 24px;
           height: 24px;
@@ -123,7 +123,7 @@ export function MapComponent({
           background-color: #2C3E50;
           transform: scale(1.2);
         }
-      `}</style>
+      `}} />
     </div>
   );
 }
