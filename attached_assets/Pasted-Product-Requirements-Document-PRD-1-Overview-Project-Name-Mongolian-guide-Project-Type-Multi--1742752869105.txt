@@ -1,0 +1,92 @@
+Product Requirements Document (PRD)
+1. Overview
+Project Name: Mongolian.guide
+Project Type: Multi-Page Interactive Website for Mongolian Tour Guide Services
+Purpose: To provide experienced, mature travelers with an engaging, trustworthy, and interactive platform to explore Mongolian destinations, select activities, and submit their preferences for a customized itinerary.
+
+2. Objectives
+    • Inform: Clearly explain your services, destinations, and customization process.
+    • Engage: Create an interactive experience using a map and selection tool for trip planning.
+    • Convert: Guide visitors toward submitting their itinerary preferences while maintaining a seamless user experience.
+
+3. Target Audience
+    • Profile: Experienced, mature travelers seeking adventure without luxury, but who appreciate comfort (warm showers, proper meals, and good beds).
+    • Group Size: Best for solo travelers up to groups of 3–4 (SUV capacity). Bigger groups can be arranged upon request and coordination.
+    • Mindset: Not backpackers but also not looking for high-end luxury; they value authenticity and personalized service.
+
+4. Tour Types & Services
+    • Tailor-Made Tours: Fully customized itineraries based on user-selected destinations, activities, and budget indications.
+    • Customization Elements:
+        ◦ Preferred destinations (selectable from an interactive map)
+        ◦ Activities of interest
+        ◦ Dietary preferences
+        ◦ Budget range
+        ◦ Additional services (accommodation type, transfers, etc.)
+    • Consultation Process:
+        ◦ User selects destinations and activities via an interactive tool.
+        ◦ User submits their selections along with additional details.
+        ◦ You respond with a draft itinerary.
+        ◦ User makes a nonrefundable consultation payment (e.g., USD100).
+        ◦ Itinerary is refined through a few email exchanges (or video call if needed).
+        ◦ Once a 30% deposit is paid, the trip is confirmed.
+        ◦ Final payment upon arrival in Mongolia.
+
+5. Branding & Style
+    • Domain & Hosting: Hosted on Mongolian.guide (already registered).
+    • Visual Identity:
+        ◦ High-quality imagery showcasing Mongolian landscapes and real travel moments.
+        ◦ An interactive map for destination selection.
+        ◦ Simple yet elegant warm, bright color scheme.
+    • Tone & Language:
+        ◦ Simple, friendly, and professional.
+        ◦ Approachable, transparent, and informative.
+
+6. Website Structure & Navigation
+Landing Page (Home)
+    • Purpose: Introduce the service and guide users to other sections.
+    • Content:
+        ◦ Engaging headline + hero image
+        ◦ Short overview of tailor-made tours
+        ◦ Call-to-Action (Plan Your Journey → Leads to selection tool)
+        ◦ Quick links to key sections
+Destinations & Activities Page (Interactive Map)
+    • Purpose: Let users explore Mongolia and select places and activities for their itinerary.
+    • Features:
+        ◦ Interactive Map: Clickable locations that reveal descriptions and images.
+        ◦ Activity Selection Tool: Allows users to choose activities they’re interested in.
+        ◦ Submit Preferences Form: Users send their selections for a custom itinerary.
+How It Works Page
+    • Purpose: Explain the step-by-step process of booking a tour.
+    • Content:
+        ◦ Infographic or icons representing each step
+        ◦ FAQs about the process and payments
+About Me & Testimonials Page
+    • Purpose: Build trust and credibility.
+    • Content:
+        ◦ Personal bio & photo
+        ◦ Past traveler testimonials
+        ◦ “Why Choose Me” section
+Contact & Submission Page
+    • Purpose: Allow users to reach out and submit their travel details.
+    • Features:
+        ◦ Simple contact form
+        ◦ Clear submission process with CTA (e.g., “Send Your Plan”)
+
+7. Interactivity & Functionality
+    • Interactive Map: Allows users to click on destinations, view information, and add them to their trip list.
+    • Activity Selection: Users can choose activities like hiking, cultural experiences, or horse riding.
+    • Real-Time Selection Review: Selected destinations and activities appear in a preview box before submission.
+    • Contact & Submission: Once users finalize their selections, they submit a form with any additional requirements.
+
+8. Technical Requirements
+    • Hosting & Domain: Hosted on Mongolian.guide.
+    • Performance: Optimized for speed and mobile-friendly.
+    • SEO Best Practices: Pages optimized for search engine rankings.
+    • Analytics: Integration with Google Analytics to track visitor engagement.
+    • Security: SSL encryption for safe data submission.
+
+9. Next Steps & Timeline
+    1. Design Phase (Wireframes & UI Prototypes)
+    2. Development Phase (Interactive map, activity selection tool, contact forms)
+    3. Testing & Optimization (Mobile responsiveness, user experience tweaks)
+    4. Launch & Monitoring
