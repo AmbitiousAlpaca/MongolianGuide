@@ -38,8 +38,8 @@ export default function ContactForm({ selectedDestinations, selectedActivities }
     defaultValues: {
       name: "",
       email: "",
-      destinations: selectedDestinations.map(d => d.name),
-      activities: selectedActivities.map(a => a.name),
+      destinations: [],
+      activities: [],
       groupSize: "",
       tripLength: "",
       travelDates: "",
@@ -49,6 +49,12 @@ export default function ContactForm({ selectedDestinations, selectedActivities }
       createdAt: new Date().toISOString(),
     }
   });
+
+  // Update form values when selections change
+  useEffect(() => {
+    form.setValue('destinations', selectedDestinations.map(d => d.name));
+    form.setValue('activities', selectedActivities.map(a => a.name));
+  }, [selectedDestinations, selectedActivities]);
 
   const mutation = useMutation({
     mutationFn: async (data: FormValues) => {
