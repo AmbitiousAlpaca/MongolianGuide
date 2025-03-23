@@ -1,16 +1,25 @@
-import React, { useEffect, useState } from 'react';
+
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
+import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
+import { useToast } from '@/hooks/use-toast';
 import { ReloadIcon } from '@radix-ui/react-icons';
+import { DatePicker } from '@mui/x-date-pickers';
 
-export default function ContactForm() {
+type Props = {
+  selectedDestinations?: string[];
+  selectedActivities?: string[];
+};
+
+export default function ContactForm({ selectedDestinations, selectedActivities }: Props) {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
+  const [startDate, setStartDate] = useState<Date | null>(null);
+  const [endDate, setEndDate] = useState<Date | null>(null);
 
   const onSubmit = async (data: any) => {
     setLoading(true);
@@ -20,7 +29,13 @@ export default function ContactForm() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          startDate,
+          endDate,
+          selectedDestinations,
+          selectedActivities,
+        }),
       });
 
       if (response.ok) {
@@ -29,6 +44,8 @@ export default function ContactForm() {
           description: "Your message has been sent.",
         });
         reset();
+        setStartDate(null);
+        setEndDate(null);
       } else {
         throw new Error('Failed to send message');
       }
@@ -44,7 +61,9 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 max-w-xl mx-auto p-6 bg-white rounded-lg shadow">
+      <h2 className="text-2xl font-bold text-center mb-6">Contact Details</h2>
+      
       <div>
         <Label htmlFor="name">Name</Label>
         <Input
@@ -76,20 +95,36 @@ export default function ContactForm() {
         )}
       </div>
 
-      <div>
-        <Label htmlFor="message">Message</Label>
-        <Textarea
-          id="message"
-          {...register("message", { required: "Message is required" })}
-          placeholder="Your message"
-          className="min-h-[120px]"
-        />
-        {errors.message && (
-          <p className="text-red-500 text-sm mt-1">{errors.message.message as string}</p>
-        )}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label>Start Date</Label>
+          <DatePicker 
+            value={startDate}
+            onChange={(date) => setStartDate(date)}
+            className="w-full"
+          />
+        </div>
+        <div>
+          <Label>End Date</Label>
+          <DatePicker 
+            value={endDate}
+            onChange={(date) => setEndDate(date)}
+            className="w-full"
+          />
+        </div>
       </div>
 
-      <Button type="submit" disabled={loading}>
+      <div>
+        <Label htmlFor="message">Additional Notes</Label>
+        <Textarea
+          id="message"
+          {...register("message")}
+          placeholder="Any specific requirements or questions?"
+          className="min-h-[120px]"
+        />
+      </div>
+
+      <Button type="submit" disabled={loading} className="w-full">
         {loading && <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />}
         Send Message
       </Button>
